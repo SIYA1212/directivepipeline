@@ -1,4 +1,4 @@
-# directivepipeline
+
 node {
 // Define the label of the agent where you want to run the pipeline
 //label 'mylabel'
