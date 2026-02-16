@@ -1,17 +1,24 @@
 
-node {
-// Define the label of the agent where you want to run the pipeline
-//label 'mylabel'
-stage('Checkout') {
+pipeline {
+agent any
+stages {
+  stage('Checkout') {
+    steps {
 // Checkout code from the Git repository
-sh 'echo checking out'
-}
+     sh 'echo checking out'
+   }
+  }
 stage('Build') {
+  steps {
 // Build the Java application (replace with your build commands)
-sh 'java -version'
+  sh 'javac -version'
+ }
 }
 stage('Deploy') {
-// Deploy the application (replace with your deployment commands)
-sh 'echo "Deploying the application"'
-}
+  steps {
+  // Deploy the application (replace with your deployment commands)
+   sh 'echo "Deploying the application"'
+   }
+  }
+ }
 }
